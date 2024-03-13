@@ -46,7 +46,7 @@ error: archlinuxcn-keyring: Signature from "Jiachen YANG (Arch Linux Packager Si
 需要在本地信任 farseerfc 的 GPG key：
 
 ```
-bash sudo pacman-key --lsign-key "farseerfc@archlinux.org"
+sudo pacman-key --lsign-key "farseerfc@archlinux.org"
 ```
 
 然后重试安装。详情参见 [新系统中安装 archlinuxcn-keyring 包前需要手动信任 farseerfc 的 key](https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/)。
@@ -69,7 +69,7 @@ ParallelDownloads = 5 # 允许同时下载多个软件包
 `yay` install https://github.com/Jguer/yay
 
 ```shell
-pacman -S --needed git base-devel
+pacman -S --needed git  base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
