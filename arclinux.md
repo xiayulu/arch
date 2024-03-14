@@ -1,6 +1,31 @@
 # Archlinux 简单安装配置教程
 
-## 镜像源配置
+## 安装教程
+
+### 准备工作
+
+- 一台电脑或虚拟机
+- archlinux 官网下载 ISO 镜像
+- Rufus 镜像制作工具
+- U 盘
+- 网络
+
+### 安装教程
+
+使用 Rufus 制作好镜像之后，进入Bios 设置U盘启动，进入系统之后设置 pacman 国内源，然后运行 archinstall。
+
+- Mirrors：选 China（安装好之后自动配置国内源）
+- Disk Configuration：best-effort------选最大的空间------ext4-------home(no)
+- Bootloader------grub
+- Profile----Minimal
+- Audio---Pipwire
+- Additional packages: vim git unzip wget curl base-devel
+- Network：copy iso
+- TimeZone：Asia/Shanghai
+
+最后：Change root-----no，关机拔出优盘再次启动即可。
+
+## 镜像源配置 
 
 ### 替换国内源
 
@@ -15,7 +40,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 更新软件包缓存：
 
 ```
-pacman -Syyu
+sudo pacman -Syyu
 ```
 
 两次 `y` 能避免从**损坏的**镜像切换到**正常的**镜像时出现的问题。
@@ -34,7 +59,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 之后通过以下命令安装 `archlinuxcn-keyring` 包导入 GPG key。
 
 ```
-pacman -Sy archlinuxcn-keyring
+sudo pacman -Sy archlinuxcn-keyring
 ```
 
 2023 年 12 月后，在新系统下安装 `archlinuxcn-keyring` 时可能会出现错误：
@@ -69,7 +94,7 @@ ParallelDownloads = 5 # 允许同时下载多个软件包
 `yay` install https://github.com/Jguer/yay
 
 ```shell
-pacman -S --needed git  base-devel
+sudo pacman -S --needed git  base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
@@ -171,10 +196,17 @@ Clash 启动后会在 `~/.config/clash` 目录生成配置文件。其中 `~/.co
 配置终端  proxy，在 `/etc/environment` 中加入如下内容
 
 ```shell
-http_proxy=127.0.0.1:7890
-https_proxy=127.0.0.1:7890
-socks_proxy=127.0.0.1:7891
+http_proxy=http://127.0.0.1:7890
+https_proxy=http://127.0.0.1:7890
+socks_proxy=http://127.0.0.1:7891
 no_proxy="localhost, 127.0.0.1"
+```
+
+sudo 保持环境变量
+
+```
+# vim /etc/sudoers.d/05_proxy
+Defaults env_keep += "*_proxy *_PROXY"
 ```
 
 创建 systemd 配置文件 `/etc/systemd/system/clash.service`
