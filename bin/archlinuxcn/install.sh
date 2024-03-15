@@ -5,7 +5,6 @@ pacman_conf=/etc/pacman.conf
 my_pacman_conf="archlinuxcn/pacman/pacman.conf"
 
 # config arlinuxcn mirror
-res=$(grep -c $name $pacman_conf)
 if file_contain $pacman_conf $name; then
     print_info "$name is already in $pacman_conf"
 else
