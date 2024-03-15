@@ -237,6 +237,10 @@ sudo systemctl enable clash --now
 
 - https://github.com/prasanthrangan/hyprdots
 
+### 
+- https://cascade.moe/posts/hyprland-configure/
+- https://www.bilibili.com/read/cv22707313/
+
 ## 常见软件的安装
 
 ### 必装软件
@@ -263,6 +267,8 @@ sudo pacman -S git base-devel firefox code
 ### android
 
 ## 常见问题解决
+
+
 
 ### Hyprland 4K 显示问题
 
