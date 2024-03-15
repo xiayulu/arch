@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e # if any excerption, script will exit
+# set -e # if any excerption, script will exit
 
 ############ Global variables ###################
 # common dirs
@@ -125,7 +125,6 @@ nvidia_detect() {
 }
 
 prompt_timer() {
-    set +e
     local timsec=$1
     local msg=$2
     local pread=""
@@ -137,5 +136,4 @@ prompt_timer() {
     done
     export promptIn
     echo ${promptIn}
-    set -e
 }

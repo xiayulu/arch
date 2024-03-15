@@ -7,6 +7,9 @@ user_config_dir="$HOME/.config/mako"
 print_info "Installing $name ..."
 yay -S $name
 
+print_info "Installing libnotify..."
+sudo pacman -Sy libnotify
+
 print_info "Copy config files..."
 cp -r "$my_config_dir/" "$user_config_dir"
 

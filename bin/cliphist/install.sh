@@ -3,7 +3,7 @@
 name=cliphist
 
 print_info "Installing $name as clipboard manager..."
-yay -S $name
+yay -S $name wl-clipboard
 
 print_ok "Install $name done."
 print_warn "You should change config at your hyprland.conf"

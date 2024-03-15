@@ -1,13 +1,13 @@
 #!/bin/bash
 name='clash'
 
-default_clash_dir="clash/.config"
-default_yaml="$default_clash_dir/config.yaml"
-default_mmdb="$default_clash_dir/Country.mmdb"
+my_clash_dir="clash/.config"
+my_yaml="$my_clash_dir/config.yaml"
+my_mmdb="$my_clash_dir/Country.mmdb"
 
 # makesure has default config file
-if [ ! -f $default_yaml ]; then
-    print_error "$default_yaml not found, you should download it from your subscription link and rename to $default_yaml"
+if [ ! -f $my_yaml ]; then
+    print_error "$my_yaml not found, you should download it from your subscription link and rename to $my_yaml"
     exit 1
 fi
 
@@ -24,10 +24,10 @@ user_yaml="$user_clash_dir/config.yaml"
 user_mmdb="$user_clash_dir/Country.mmdb"
 
 copy_clash_config() {
-    print_info "Copying $default_yaml --> $user_yaml ..."
+    print_info "Copying $my_yaml --> $user_yaml ..."
     mkdir -p $user_clash_dir
-    cp $default_yaml $user_yaml
-    cp $default_mmdb $user_mmdb
+    cp $my_yaml $user_yaml
+    cp $my_mmdb $user_mmdb
 }
 
 if [ -f $user_yaml ]; then
@@ -43,20 +43,25 @@ else
 fi
 
 # config clash.service
-service_file="$default_clash_dir/clash.service"
+service_file="$my_clash_dir/clash.service"
 print_info "$Copying $service_file --> $SERVICE_ROOT_DIR ..."
 sudo cp $service_file $SERVICE_ROOT_DIR
 service_ctl $name
 
 # config env vars
 print_info "Configing proxy env vars at: $SYSTEM_ENV_FILE ..."
-sudo echo 'http_proxy=http://127.0.0.1:7890' >>$SYSTEM_ENV_FILE
-sudo echo 'https_proxy=http://127.0.0.1:7890' >>$SYSTEM_ENV_FILE
-sudo echo 'socks_proxy=http://127.0.0.1:7891' >>$SYSTEM_ENV_FILE
-sudo echo 'no_proxy="localhost, 127.0.0.1"' >>$SYSTEM_ENV_FILE
+
+sudo cat <<EOF >>$SYSTEM_ENV_FILE
+# http proxy
+http_proxy=http://127.0.0.1:7890
+https_proxy=http://127.0.0.1:7890
+socks_proxy=http://127.0.0.1:7891
+no_proxy="localhost, 127.0.0.1"
+EOF
+
 
 print_info "Configing sudoers env file"
-sudo_keep_proxy="$default_clash_dir/proxy"
+sudo_keep_proxy="$my_clash_dir/proxy"
 sudo cp $sudo_keep_proxy "/etc/sudoers.d/"
 
 # done
