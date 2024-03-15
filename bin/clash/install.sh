@@ -44,8 +44,8 @@ fi
 
 # config clash.service
 service_file="$default_clash_dir/clash.service"
-print_info "$Copying $service_file --> $service_root_dir ..."
-sudo cp $service_file $service_root_dir
+print_info "$Copying $service_file --> $SERVICE_ROOT_DIR ..."
+sudo cp $service_file $SERVICE_ROOT_DIR
 service_ctl $name
 
 # config env vars
