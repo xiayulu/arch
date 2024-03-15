@@ -5,6 +5,8 @@ set -e # if any excerption, script will exit
 ############ Global variables ###################
 # common dirs
 SERVICE_ROOT_DIR="/etc/systemd/system"
+SYSTEM_ENV_FILE="/etc/environment"
+
 # common cmds
 AUR_HELPER="yay"
 

@@ -49,12 +49,11 @@ sudo cp $service_file $SERVICE_ROOT_DIR
 service_ctl $name
 
 # config env vars
-env_file=/etc/environment
-print_info "Configing proxy env vars at: $env_file ..."
-sudo echo 'http_proxy=http://127.0.0.1:7890' >>$env_file
-sudo echo 'https_proxy=http://127.0.0.1:7890' >>$env_file
-sudo echo 'socks_proxy=http://127.0.0.1:7891' >>$env_file
-sudo echo 'no_proxy="localhost, 127.0.0.1"' >>$env_file
+print_info "Configing proxy env vars at: $SYSTEM_ENV_FILE ..."
+sudo echo 'http_proxy=http://127.0.0.1:7890' >>$SYSTEM_ENV_FILE
+sudo echo 'https_proxy=http://127.0.0.1:7890' >>$SYSTEM_ENV_FILE
+sudo echo 'socks_proxy=http://127.0.0.1:7891' >>$SYSTEM_ENV_FILE
+sudo echo 'no_proxy="localhost, 127.0.0.1"' >>$SYSTEM_ENV_FILE
 
 print_info "Configing sudoers env file"
 sudo_keep_proxy="$default_clash_dir/proxy"

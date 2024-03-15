@@ -143,7 +143,7 @@ sudo pacman -Sy adobe-source-han-sans-cn-fonts
 安装如下依赖
 
 ```shell
-sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki
+sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-material-color
 ```
 
 - fcitx5-chinese-addons 包含各种中文输入法

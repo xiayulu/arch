@@ -1,6 +1,8 @@
 #!/bin/bash
 
 source shared/install.sh
-source archlinuxcn/install.sh
-source aur/install.sh
-source clash/install.sh
+# source archlinuxcn/install.sh
+# source aur/install.sh
+# source clash/install.sh
+source hyprland/install.sh
+source im/install.sh
