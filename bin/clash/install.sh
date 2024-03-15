@@ -18,6 +18,9 @@ else
     yay -S $name
 fi
 
+# run clash
+clash
+
 # config clash
 user_clash_dir="$HOME/.config/clash"
 user_yaml="$user_clash_dir/config.yaml"
@@ -27,20 +30,10 @@ copy_clash_config() {
     print_info "Copying $my_yaml --> $user_yaml ..."
     mkdir -p $user_clash_dir
     cp $my_yaml $user_yaml
-    cp $my_mmdb $user_mmdb
+    # cp $my_mmdb $user_mmdb
 }
 
-if [ -f $user_yaml ]; then
-    # if has content
-    res=$(grep -c "name" $user_yaml)
-    if [ "$res" == "0" ]; then
-        copy_clash_config
-    else
-        print_info "$user_yaml already exists."
-    fi
-else
-    copy_clash_config
-fi
+copy_clash_config
 
 # config clash.service
 service_file="$my_clash_dir/clash.service"
