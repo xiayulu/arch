@@ -1,17 +1,16 @@
 name='yay'
 
 # install yay aur helper
-yay -h /dev/null 2>&1
-if [ $? -eq 0 ]; then
-    echo -e "$info[Info] $name already installed $reset"
+if pkg_installed $name; then
+    print_info "$name  has already installed"
 else
-    echo -e "$info[Info] Installing $yay $reset"
+    print_info "Installing $name"
     mkdir .cache && cd .cache
     git clone https://aur.archlinux.org/yay-bin.git
     cd yay-bin && makepkg -si
     # clean
     cd ..
-    rm -r .cache
+    rm -rf .cache
 fi
 
-echo -e "$ok[Done] install $name done. $reset"
+print_ok "Install $name done."
