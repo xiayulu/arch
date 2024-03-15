@@ -8,3 +8,5 @@ source shared/install.sh
 # source im/install.sh
 # source waybar/install.sh
 source mako/install.sh
+source tofi/install.sh
+source tofi/install.sh
