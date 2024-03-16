@@ -11,7 +11,7 @@ cp $my_config_file $user_config_file
 
 print_info "install 4k utils"
 
-if pkg_installed xorg-xwayland-hidpi-xprop; then
+if pkg_installed hyprland-hidpi-xprop-git && pkg_installed wlroots-hidpi-xprop-git; then
     print_info "4k utils has installed"
 else
     yay -S xorg-xwayland-hidpi-xprop wlroots-hidpi-xprop-git hyprland-hidpi-xprop-git xorg-xrdb
