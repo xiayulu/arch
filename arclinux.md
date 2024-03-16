@@ -17,13 +17,13 @@
 - Mirrors：选 China（安装好之后自动配置国内源）
 - Disk Configuration：best-effort------选最大的空间------ext4-------home(no)
 - Bootloader------grub
-- Profile----Minimal
+- Profile----hyprland
 - Audio---Pipwire
-- Additional packages: vim git unzip wget curl base-devel
+- Additional packages: vim git firefox wget code
 - Network：copy iso
 - TimeZone：Asia/Shanghai
 
-最后：Change root-----no，关机拔出优盘再次启动即可。
+最后：Change root-----no，重新启动即可。
 
 ## 镜像源配置 
 
@@ -179,7 +179,9 @@ timedatectl set-ntp true #设置NTP服务器
 timedatectl status #查看设置
 ```
 
-## 科学上网
+## 网络加速
+
+### 方法一：clash
 
 ```shell
 yay -S clash
@@ -231,44 +233,193 @@ WantedBy=multi-user.target
 sudo systemctl enable clash --now
 ```
 
+### 方法二：v2ray
+
+v2ray 需要一个内核 v2ray 与一个客户端 v2raya
+
+```shell
+sudo pacman -Sy v2ray
+yay -S v2raya-bin
+```
+
+  运行服务：
+
+```shell
+sudo systemctl enable v2ray.service --now
+sudo systemctl enable v2raya.service --now
+```
+
+配置：
+
+浏览器打开：http://127.0.0.1:2017，粘贴订阅连接，右上角设置： On: Proxy except CN Sites即可。 
+
+环境变量设置为：
+
+```shell
+http_proxy=http://127.0.0.1:20171
+https_proxy=http://127.0.0.1:20171
+socks_proxy=http://127.0.0.1:20170
+no_proxy="localhost, 127.0.0.1"
+```
+
 
 
 ## hyprland
 
 - https://github.com/prasanthrangan/hyprdots
 
-### 
 - https://cascade.moe/posts/hyprland-configure/
 - https://www.bilibili.com/read/cv22707313/
 
-## 常见软件的安装
+### 截屏与录屏
 
-### 必装软件
+如果需要进行屏幕录制或者直播，pipewire 是必须的：
 
 ```shell
-sudo pacman -S git base-devel firefox code
+sudo pacman -S pipewire wireplumber slurp grim
 ```
 
-- git：代码版本管理
-- base-devel：编译工具
-- firefox：火狐浏览器
-- code：VsCode
 
-### oh my zsh
+
+## 常见软件的安装
+
+### 基础开发
+
+**VSCode:**
+
+```shell
+pacman -Sy code
+```
+
+**oh-my-zsh**
+
+```shell
+sudo pacman -Sy zsh
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+
+个人推荐主题：`ys`，好记又漂亮。
+
+**zsh-autosuggestions**
+
+1. Clone zsh-autosuggestions into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
+
+   ```
+   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+   ```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
+
+   ```
+   plugins=( 
+       # other plugins...
+       zsh-autosuggestions
+   )
+   ```
+
+3. Start a new terminal session.
+
+**zoxide**
+
+A smarter cd command. Supports all major shells: https://github.com/ajeetdsouza/zoxide
+
+```shell
+sudo pacman -Sy zoxide
+```
+
+Add this to the **end** of your config file (usually `~/.zshrc`):
+
+```shell
+eval "$(zoxide init zsh)"
+```
+
+For completions to work, the above line must be added *after* `compinit` is called. You may have to rebuild your completions cache by running `rm ~/.zcompdump*; compinit`.
 
 ### Docker
 
+- https://wiki.archlinux.org/title/Docker
+
+```shell
+sudo pacman -Sy docker docker-compose
+docker info
+
+sudo systemctl enable docker.socket --now
+sudo docker info
+```
+
+### DBeaver
+
+- https://wiki.archlinux.org/title/Dbeaver
+
+```shell
+sudo pacman -Sy dbeaver
+```
+
+### Python
+
+https://wiki.archlinux.org/title/Conda
+
+```shell
+yay -S miniconda3
+```
+
+`~/.condarc`
+
+```shell
+auto_activate_base: false
+```
+Example
+```shell
+# To create a environment with specified python version and packages
+conda create --name myenv python=3.9 numpy=1.23.5 astropy
+# To activate the environment:
+conda activate myenv
+# conda env list
+conda env list
+
+# create a new environment from a myenv.yml
+conda env create -f myenv.yml
+# To export all packages in myenv environment
+conda activate myenv
+conda env export > myenv.yml
+```
+
 ### golang
 
-### java
+### Java
+
+- https://wiki.archlinux.org/title/Java
+
+```shell
+sudo pacman -Sy jdk-openjdk
+source /etc/profile
+java -version
+```
+
+**Android Studio**
+
+```shell
+yay -S android-studio
+```
+
+
 
 ### Rust
 
-### android
+## 磁盘挂载
+
+```shell
+# 列出所有的磁盘
+fdisk -l
+# 挂载
+mount /dev/sda /mnt
+# 卸载
+umount /dev/sda
+```
+
+
 
 ## 常见问题解决
-
-
 
 ### Hyprland 4K 显示问题
 
@@ -290,8 +441,26 @@ exec-once = xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOB
 # 设置 xwayland 的 DPI 192, 一倍的 DPI 为96, 2倍即为192
 exec-once = echo 'Xft.dpi:192' | xrdb -merge
 # 设置 xwayland 下 gtk 的缩放，不会影响 wayland 下 gtk 的缩放
-env = GDK_SCALE,2       # 这一行我不确定要不要，可以尝试一下
+env = GDK_SCALE,2       # 这一行我不确定要不要，可以尝试一下，<--备注：不要
 # 设置 xwayalnd 鼠标图标的大小
+env = XCURSOR_SIZE,32
+```
+
+另外一种方法：
+
+https://wiki.hyprland.org/Configuring/XWayland/，不需要安装其他依赖。
+
+```shell
+# change monitor to high resolution, the last argument is the scale factor
+monitor=,highres,auto,2
+
+# unscale XWayland
+xwayland {
+  force_zero_scaling = true
+}
+
+# toolkit-specific scale
+env = GDK_SCALE,2
 env = XCURSOR_SIZE,32
 ```
 
