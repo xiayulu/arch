@@ -3,3 +3,17 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
+
+# clash
+http_proxy=http://127.0.0.1:7890
+https_proxy=http://127.0.0.1:7890
+socks_proxy=http://127.0.0.1:7891
+no_proxy="localhost, 127.0.0.1"
+
+# fcitx5
+#GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+INPUT_METHOD=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus

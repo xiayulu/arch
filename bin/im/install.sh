@@ -11,14 +11,6 @@ sudo pacman -Sy fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-mate
 
 # config im
 print_info "Config input method at: $SYSTEM_ENV_FILE"
-sudo cat <<EOF >>$SYSTEM_ENV_FILE
-#GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-INPUT_METHOD=fcitx
-SDL_IM_MODULE=fcitx
-GLFW_IM_MODULE=ibus
-EOF
 
 print_info "Start fcitx at hyprland"
 hypr_config="$HOME/.config/hypr/hyprland.conf"

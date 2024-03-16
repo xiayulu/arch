@@ -44,13 +44,7 @@ service_ctl $name
 # config env vars
 print_info "Configing proxy env vars at: $SYSTEM_ENV_FILE ..."
 
-sudo cat <<EOF >>$SYSTEM_ENV_FILE
-# http proxy
-http_proxy=http://127.0.0.1:7890
-https_proxy=http://127.0.0.1:7890
-socks_proxy=http://127.0.0.1:7891
-no_proxy="localhost, 127.0.0.1"
-EOF
+sudo cp "$my_clash_dir/environment" $SYSTEM_ENV_FILE
 
 
 print_info "Configing sudoers env file"
