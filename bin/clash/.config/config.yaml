@@ -1,8 +1,7 @@
-
 #---------------------------------------------------#
-## 更新：2024-03-13 04:32:57
+## 更新：2024-03-16 12:23:30
 ## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
-## 链接：https://10ad11864e93-apiv1.v27qae.com/flydsubal/kljqyltobar5mog7?clash=1
+## 链接：https://36bf0d89fe3a-apiv1.v27qae.com/flydsubal/kljqyltobar5mog7?clash=1
 #---------------------------------------------------#
 
 # HTTP 代理端口
@@ -47,80 +46,80 @@ dns:
 
 
 proxies:
-  - {"name":"Hong Kong-01","type":"ss","server":"762a816c.h2m5m5m7s3-fb-hk01.6pzfwf.com","port":56001,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-02","type":"ss","server":"762a816c.z4f0d9i1c6-fb-hk02.6pzfwf.com","port":56002,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-03","type":"ss","server":"762a816c.w1o0q7h0v5-fb-hk03.6pzfwf.com","port":56003,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-04","type":"ss","server":"762a816c.k7y6j1q5j7-fb-hk04.6pzfwf.com","port":56004,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-05","type":"ss","server":"762a816c.t1v0e4l6w3-fb-hk05.6pzfwf.com","port":56005,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-06","type":"ss","server":"762a816c.l3x3b6j6c7-fb-hk06.6pzfwf.com","port":56006,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-07","type":"ss","server":"762a816c.x6m8q1f3y9-fb-hk07.6pzfwf.com","port":56007,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-08","type":"ss","server":"762a816c.c8p8o0c5i9-fb-hk08.6pzfwf.com","port":56008,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-09","type":"ss","server":"762a816c.j9i1k1d2n6-fb-hk09.6pzfwf.com","port":56009,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-10","type":"ss","server":"762a816c.m2b9c0k7b0-fb-hk10.6pzfwf.com","port":56010,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-11","type":"ss","server":"762a816c.d9l6y9i3u7-fb-hk11.6pzfwf.com","port":56011,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-12","type":"ss","server":"762a816c.b4t0o9j7z0-fb-hk12.6pzfwf.com","port":56012,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-13","type":"ss","server":"762a816c.e1m8h0s6c4-fb-hk13.6pzfwf.com","port":56013,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-14","type":"ss","server":"762a816c.j4o1v1d1m8-fb-hk14.6pzfwf.com","port":56014,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-15","type":"ss","server":"762a816c.c7b7m4g9w5-fb-hk15.6pzfwf.com","port":56015,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-16","type":"ss","server":"762a816c.b4c3y4i5k7-fb-hk16.6pzfwf.com","port":56016,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-17","type":"ss","server":"762a816c.j3o0d1w0i2-fb-hk17.6pzfwf.com","port":56017,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-18","type":"ss","server":"762a816c.b8z9y9a5g9-fb-hk18.6pzfwf.com","port":56018,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-19","type":"ss","server":"762a816c.n2k5u8p2l3-fb-hk19.6pzfwf.com","port":56019,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Hong Kong-20","type":"ss","server":"762a816c.q2q1r7t7i1-fb-hk20.6pzfwf.com","port":56020,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-01","type":"ss","server":"762a816c.g5i2h5u6j3-fb-tw01.6pzfwf.com","port":56021,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-02","type":"ss","server":"762a816c.q5p4g2i9n8-fb-tw02.6pzfwf.com","port":56022,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-03","type":"ss","server":"762a816c.e1f4p6b9l6-fb-tw03.6pzfwf.com","port":56023,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-04","type":"ss","server":"762a816c.d9e3a5o3m3-fb-tw04.6pzfwf.com","port":56024,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-05","type":"ss","server":"762a816c.t3w5r6a5b6-fb-tw05.6pzfwf.com","port":56025,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-06","type":"ss","server":"762a816c.w7e0v1h7s6-fb-tw06.6pzfwf.com","port":56026,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-07","type":"ss","server":"762a816c.b4s1f7b1f6-fb-tw07.6pzfwf.com","port":56027,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-08","type":"ss","server":"762a816c.w1q4y3g3y9-fb-tw08.6pzfwf.com","port":56028,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-09","type":"ss","server":"762a816c.e7n4h8o6p2-fb-tw09.6pzfwf.com","port":56029,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Taiwan-10","type":"ss","server":"762a816c.e2l8i4d0s6-fb-tw10.6pzfwf.com","port":56030,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-01","type":"ss","server":"762a816c.u2k2b1y2y8-fb-jp01.6pzfwf.com","port":56031,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-02","type":"ss","server":"762a816c.k3c0d7u0o8-fb-jp02.6pzfwf.com","port":56032,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-03","type":"ss","server":"762a816c.x8u0j9p3x8-fb-jp03.6pzfwf.com","port":56033,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-04","type":"ss","server":"762a816c.i5l0q0z1g9-fb-jp04.6pzfwf.com","port":56034,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-05","type":"ss","server":"762a816c.o0p2h3c6e9-fb-jp05.6pzfwf.com","port":56035,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-06","type":"ss","server":"762a816c.x0j0t7m4c2-fb-jp06.6pzfwf.com","port":56036,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-07","type":"ss","server":"762a816c.r7p0n9u0u1-fb-jp07.6pzfwf.com","port":56037,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-08","type":"ss","server":"762a816c.w3j6z0w5r1-fb-jp08.6pzfwf.com","port":56038,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-09","type":"ss","server":"762a816c.x9o3f2u7o5-fb-jp09.6pzfwf.com","port":56039,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Japan-10","type":"ss","server":"762a816c.l4a7m1t7o9-fb-jp10.6pzfwf.com","port":56040,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-01","type":"ss","server":"762a816c.g1v1p1b6f2-fb-sg01.6pzfwf.com","port":56041,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-02","type":"ss","server":"762a816c.n3k8r2m5d0-fb-sg02.6pzfwf.com","port":56042,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-03","type":"ss","server":"762a816c.h1v1d0d4y0-fb-sg03.6pzfwf.com","port":56043,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-04","type":"ss","server":"762a816c.v7j4k1a0s1-fb-sg04.6pzfwf.com","port":56044,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-05","type":"ss","server":"762a816c.v2c3p9i2y0-fb-sg05.6pzfwf.com","port":56045,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-06","type":"ss","server":"762a816c.q2q9p9t0q2-fb-sg06.6pzfwf.com","port":56046,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-07","type":"ss","server":"762a816c.l9x3y6g1c9-fb-sg07.6pzfwf.com","port":56047,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-08","type":"ss","server":"762a816c.y6r5t2u7x1-fb-sg08.6pzfwf.com","port":56048,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-09","type":"ss","server":"762a816c.p0c1h3j5d6-fb-sg09.6pzfwf.com","port":56049,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Singapore-10","type":"ss","server":"762a816c.i6c5x1e2v0-fb-sg10.6pzfwf.com","port":56050,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-01","type":"ss","server":"762a816c.y7i6z4w6e7-fb-us01.6pzfwf.com","port":56051,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-02","type":"ss","server":"762a816c.k2a9o5h3x3-fb-us02.6pzfwf.com","port":56052,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-03","type":"ss","server":"762a816c.p1s6x6l9p5-fb-us03.6pzfwf.com","port":56053,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-04","type":"ss","server":"762a816c.h1v9e3i3t5-fb-us04.6pzfwf.com","port":56054,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-05","type":"ss","server":"762a816c.k3t6s5q3d0-fb-us05.6pzfwf.com","port":56055,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-06","type":"ss","server":"762a816c.r9m6t7z0c1-fb-us06.6pzfwf.com","port":56056,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-07","type":"ss","server":"762a816c.l9o6m8o8g7-fb-us07.6pzfwf.com","port":56057,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-08","type":"ss","server":"762a816c.l5s0n8w0r7-fb-us08.6pzfwf.com","port":56058,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-09","type":"ss","server":"762a816c.n1b6u7w1e6-fb-us09.6pzfwf.com","port":56059,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"USA-10","type":"ss","server":"762a816c.c5m1d8v9t6-fb-us10.6pzfwf.com","port":56060,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"UK-01","type":"ss","server":"762a816c.r2n3u8n5a2-fb-uk01.6pzfwf.com","port":56061,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"UK-02","type":"ss","server":"762a816c.n7y5v1s7m1-fb-uk02.6pzfwf.com","port":56062,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"UK-03","type":"ss","server":"762a816c.y6k6k6p7z5-fb-uk03.6pzfwf.com","port":56063,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"UK-04","type":"ss","server":"762a816c.e7d2l1j0x3-fb-uk04.6pzfwf.com","port":56064,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"UK-05","type":"ss","server":"762a816c.l6d3a8u9c1-fb-uk05.6pzfwf.com","port":56065,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Malaysia-01","type":"ss","server":"762a816c.v6q5t9f8a0-fb-my01.6pzfwf.com","port":56066,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Malaysia-02","type":"ss","server":"762a816c.t3s9n7b1x8-fb-my02.6pzfwf.com","port":56067,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Malaysia-03","type":"ss","server":"762a816c.r3g4r1m8j1-fb-my03.6pzfwf.com","port":56068,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Malaysia-04","type":"ss","server":"762a816c.i7v2a9h4n2-fb-my04.6pzfwf.com","port":56069,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Malaysia-05","type":"ss","server":"762a816c.u2k3f8l6w4-fb-my05.6pzfwf.com","port":56070,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Turkey-01","type":"ss","server":"762a816c.u1n0r7b7j6-fb-tr01.6pzfwf.com","port":56097,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Turkey-02","type":"ss","server":"762a816c.a9j8w9y8i0-fb-tr02.6pzfwf.com","port":56098,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Argentina-01","type":"ss","server":"762a816c.x5z4i3p6a9-fb-ar01.6pzfwf.com","port":56099,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
-  - {"name":"Argentina-02","type":"ss","server":"762a816c.c4h0m9x2t7-fb-ar02.6pzfwf.com","port":56100,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-01","type":"ss","server":"d8044505.h2m5m5m7s3-fb-hk01.6pzfwf.com","port":56001,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-02","type":"ss","server":"d8044505.z4f0d9i1c6-fb-hk02.6pzfwf.com","port":56002,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-03","type":"ss","server":"d8044505.w1o0q7h0v5-fb-hk03.6pzfwf.com","port":56003,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-04","type":"ss","server":"d8044505.k7y6j1q5j7-fb-hk04.6pzfwf.com","port":56004,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-05","type":"ss","server":"d8044505.t1v0e4l6w3-fb-hk05.6pzfwf.com","port":56005,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-06","type":"ss","server":"d8044505.l3x3b6j6c7-fb-hk06.6pzfwf.com","port":56006,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-07","type":"ss","server":"d8044505.x6m8q1f3y9-fb-hk07.6pzfwf.com","port":56007,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-08","type":"ss","server":"d8044505.c8p8o0c5i9-fb-hk08.6pzfwf.com","port":56008,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-09","type":"ss","server":"d8044505.j9i1k1d2n6-fb-hk09.6pzfwf.com","port":56009,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-10","type":"ss","server":"d8044505.m2b9c0k7b0-fb-hk10.6pzfwf.com","port":56010,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-11","type":"ss","server":"d8044505.d9l6y9i3u7-fb-hk11.6pzfwf.com","port":56011,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-12","type":"ss","server":"d8044505.b4t0o9j7z0-fb-hk12.6pzfwf.com","port":56012,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-13","type":"ss","server":"d8044505.e1m8h0s6c4-fb-hk13.6pzfwf.com","port":56013,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-14","type":"ss","server":"d8044505.j4o1v1d1m8-fb-hk14.6pzfwf.com","port":56014,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-15","type":"ss","server":"d8044505.c7b7m4g9w5-fb-hk15.6pzfwf.com","port":56015,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-16","type":"ss","server":"d8044505.b4c3y4i5k7-fb-hk16.6pzfwf.com","port":56016,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-17","type":"ss","server":"d8044505.j3o0d1w0i2-fb-hk17.6pzfwf.com","port":56017,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-18","type":"ss","server":"d8044505.b8z9y9a5g9-fb-hk18.6pzfwf.com","port":56018,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-19","type":"ss","server":"d8044505.n2k5u8p2l3-fb-hk19.6pzfwf.com","port":56019,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Hong Kong-20","type":"ss","server":"d8044505.q2q1r7t7i1-fb-hk20.6pzfwf.com","port":56020,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-01","type":"ss","server":"d8044505.g5i2h5u6j3-fb-tw01.6pzfwf.com","port":56021,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-02","type":"ss","server":"d8044505.q5p4g2i9n8-fb-tw02.6pzfwf.com","port":56022,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-03","type":"ss","server":"d8044505.e1f4p6b9l6-fb-tw03.6pzfwf.com","port":56023,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-04","type":"ss","server":"d8044505.d9e3a5o3m3-fb-tw04.6pzfwf.com","port":56024,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-05","type":"ss","server":"d8044505.t3w5r6a5b6-fb-tw05.6pzfwf.com","port":56025,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-06","type":"ss","server":"d8044505.w7e0v1h7s6-fb-tw06.6pzfwf.com","port":56026,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-07","type":"ss","server":"d8044505.b4s1f7b1f6-fb-tw07.6pzfwf.com","port":56027,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-08","type":"ss","server":"d8044505.w1q4y3g3y9-fb-tw08.6pzfwf.com","port":56028,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-09","type":"ss","server":"d8044505.e7n4h8o6p2-fb-tw09.6pzfwf.com","port":56029,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Taiwan-10","type":"ss","server":"d8044505.e2l8i4d0s6-fb-tw10.6pzfwf.com","port":56030,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-01","type":"ss","server":"d8044505.u2k2b1y2y8-fb-jp01.6pzfwf.com","port":56031,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-02","type":"ss","server":"d8044505.k3c0d7u0o8-fb-jp02.6pzfwf.com","port":56032,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-03","type":"ss","server":"d8044505.x8u0j9p3x8-fb-jp03.6pzfwf.com","port":56033,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-04","type":"ss","server":"d8044505.i5l0q0z1g9-fb-jp04.6pzfwf.com","port":56034,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-05","type":"ss","server":"d8044505.o0p2h3c6e9-fb-jp05.6pzfwf.com","port":56035,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-06","type":"ss","server":"d8044505.x0j0t7m4c2-fb-jp06.6pzfwf.com","port":56036,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-07","type":"ss","server":"d8044505.r7p0n9u0u1-fb-jp07.6pzfwf.com","port":56037,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-08","type":"ss","server":"d8044505.w3j6z0w5r1-fb-jp08.6pzfwf.com","port":56038,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-09","type":"ss","server":"d8044505.x9o3f2u7o5-fb-jp09.6pzfwf.com","port":56039,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Japan-10","type":"ss","server":"d8044505.l4a7m1t7o9-fb-jp10.6pzfwf.com","port":56040,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-01","type":"ss","server":"d8044505.g1v1p1b6f2-fb-sg01.6pzfwf.com","port":56041,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-02","type":"ss","server":"d8044505.n3k8r2m5d0-fb-sg02.6pzfwf.com","port":56042,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-03","type":"ss","server":"d8044505.h1v1d0d4y0-fb-sg03.6pzfwf.com","port":56043,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-04","type":"ss","server":"d8044505.v7j4k1a0s1-fb-sg04.6pzfwf.com","port":56044,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-05","type":"ss","server":"d8044505.v2c3p9i2y0-fb-sg05.6pzfwf.com","port":56045,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-06","type":"ss","server":"d8044505.q2q9p9t0q2-fb-sg06.6pzfwf.com","port":56046,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-07","type":"ss","server":"d8044505.l9x3y6g1c9-fb-sg07.6pzfwf.com","port":56047,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-08","type":"ss","server":"d8044505.y6r5t2u7x1-fb-sg08.6pzfwf.com","port":56048,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-09","type":"ss","server":"d8044505.p0c1h3j5d6-fb-sg09.6pzfwf.com","port":56049,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Singapore-10","type":"ss","server":"d8044505.i6c5x1e2v0-fb-sg10.6pzfwf.com","port":56050,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-01","type":"ss","server":"d8044505.y7i6z4w6e7-fb-us01.6pzfwf.com","port":56051,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-02","type":"ss","server":"d8044505.k2a9o5h3x3-fb-us02.6pzfwf.com","port":56052,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-03","type":"ss","server":"d8044505.p1s6x6l9p5-fb-us03.6pzfwf.com","port":56053,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-04","type":"ss","server":"d8044505.h1v9e3i3t5-fb-us04.6pzfwf.com","port":56054,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-05","type":"ss","server":"d8044505.k3t6s5q3d0-fb-us05.6pzfwf.com","port":56055,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-06","type":"ss","server":"d8044505.r9m6t7z0c1-fb-us06.6pzfwf.com","port":56056,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-07","type":"ss","server":"d8044505.l9o6m8o8g7-fb-us07.6pzfwf.com","port":56057,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-08","type":"ss","server":"d8044505.l5s0n8w0r7-fb-us08.6pzfwf.com","port":56058,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-09","type":"ss","server":"d8044505.n1b6u7w1e6-fb-us09.6pzfwf.com","port":56059,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"USA-10","type":"ss","server":"d8044505.c5m1d8v9t6-fb-us10.6pzfwf.com","port":56060,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"UK-01","type":"ss","server":"d8044505.r2n3u8n5a2-fb-uk01.6pzfwf.com","port":56061,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"UK-02","type":"ss","server":"d8044505.n7y5v1s7m1-fb-uk02.6pzfwf.com","port":56062,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"UK-03","type":"ss","server":"d8044505.y6k6k6p7z5-fb-uk03.6pzfwf.com","port":56063,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"UK-04","type":"ss","server":"d8044505.e7d2l1j0x3-fb-uk04.6pzfwf.com","port":56064,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"UK-05","type":"ss","server":"d8044505.l6d3a8u9c1-fb-uk05.6pzfwf.com","port":56065,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Malaysia-01","type":"ss","server":"d8044505.v6q5t9f8a0-fb-my01.6pzfwf.com","port":56066,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Malaysia-02","type":"ss","server":"d8044505.t3s9n7b1x8-fb-my02.6pzfwf.com","port":56067,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Malaysia-03","type":"ss","server":"d8044505.r3g4r1m8j1-fb-my03.6pzfwf.com","port":56068,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Malaysia-04","type":"ss","server":"d8044505.i7v2a9h4n2-fb-my04.6pzfwf.com","port":56069,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Malaysia-05","type":"ss","server":"d8044505.u2k3f8l6w4-fb-my05.6pzfwf.com","port":56070,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Turkey-01","type":"ss","server":"d8044505.u1n0r7b7j6-fb-tr01.6pzfwf.com","port":56097,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Turkey-02","type":"ss","server":"d8044505.a9j8w9y8i0-fb-tr02.6pzfwf.com","port":56098,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Argentina-01","type":"ss","server":"d8044505.x5z4i3p6a9-fb-ar01.6pzfwf.com","port":56099,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
+  - {"name":"Argentina-02","type":"ss","server":"d8044505.c4h0m9x2t7-fb-ar02.6pzfwf.com","port":56100,"cipher":"chacha20-ietf-poly1305","password":"RZciZ2","udp":true}
 
 proxy-groups:
 -
