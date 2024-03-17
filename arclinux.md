@@ -12,7 +12,7 @@
 
 ### 安装教程
 
-使用 Rufus 制作好镜像之后，进入Bios 设置U盘启动，进入系统之后设置 pacman 国内源，然后运行 archinstall。
+使用 Rufus 制作好镜像之后，进入 BIOS 设置 U 盘启动，进入系统之后设置 `pacman` 国内源，然后运行 `archinstall`。
 
 - Mirrors：选 China（安装好之后自动配置国内源）
 - Disk Configuration：best-effort------选最大的空间------ext4-------home(no)
@@ -276,7 +276,13 @@ no_proxy="localhost, 127.0.0.1"
 如果需要进行屏幕录制或者直播，pipewire 是必须的：
 
 ```shell
-sudo pacman -S pipewire wireplumber slurp grim
+sudo pacman -Sy pipewire wireplumber slurp grim
+```
+
+**录屏**
+
+```shell
+sudo pacman -Sy obs-studio
 ```
 
 
@@ -291,6 +297,10 @@ sudo pacman -S pipewire wireplumber slurp grim
 pacman -Sy code
 ```
 
+- 隐藏文件（夹）：Settings ---> 搜 exclude
+- 字体：Settings ---> 搜 font family
+- AI 补全：Github copilot($100/year), Codium(free)
+
 **oh-my-zsh**
 
 ```shell
@@ -300,7 +310,7 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 
 个人推荐主题：`ys`，好记又漂亮。
 
-**zsh-autosuggestions**
+1**zsh-autosuggestions**
 
 1. Clone zsh-autosuggestions into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
@@ -335,6 +345,20 @@ eval "$(zoxide init zsh)"
 
 For completions to work, the above line must be added *after* `compinit` is called. You may have to rebuild your completions cache by running `rm ~/.zcompdump*; compinit`.
 
+**Github CLI**
+
+- https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+
+```shell
+sudo pacman -Sy github-cli
+```
+
+常用命令：
+
+```shell
+gh auth login
+```
+
 ### Docker
 
 - https://wiki.archlinux.org/title/Docker
@@ -367,11 +391,38 @@ yay -S miniconda3
 
 ```shell
 auto_activate_base: false
+
+# proxy (SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING])
+proxy_servers:
+  http: http://127.0.0.1:7890
+  https: http://127.0.0.1:7890
+
+# 清华镜像
+# https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 ```
+运行 `conda clean -i` 清除索引缓存，保证用的是镜像站提供的索引。
+
 Example
+
 ```shell
 # To create a environment with specified python version and packages
-conda create --name myenv python=3.9 numpy=1.23.5 astropy
+conda create -n myenv python=3.9 numpy=1.23.5 astropy
 # To activate the environment:
 conda activate myenv
 # conda env list
@@ -383,6 +434,30 @@ conda env create -f myenv.yml
 conda activate myenv
 conda env export > myenv.yml
 ```
+
+ 虚拟环境提示符：
+
+- https://gist.github.com/abaksy/52d6e6d84087d4e32ad285b74f85c9eb
+
+修改：`~/.oh-my-zsh/themes/ys.zsh-theme`
+
+```shell
+virtenv_prompt() {
+	local env=;
+
+	# if "$CONDA_DEFAULT_ENV" variable exists,
+	# then you are using conda to manage python virtual env
+	if [[ -n "$CONDA_DEFAULT_ENV" ]]; then
+		env="$CONDA_DEFAULT_ENV"
+	elif [[ -n "$VIRTUAL_ENV" ]]; then
+		env="$VIRTUAL_ENV"
+	fi
+	[[ -n "${env:-}" ]] || return
+	echo "${YS_THEME_VIRTUALENV_PROMPT_PREFIX}${VIRTUAL_ENV:t}${YS_THEME_VIRTUALENV_PROMPT_SUFFIX}"
+}
+```
+
+
 
 ### golang
 
