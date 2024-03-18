@@ -457,6 +457,23 @@ virtenv_prompt() {
 }
 ```
 
+#### 临时使用
+
+```
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+```
+
+注意，`simple` 不能少, 是 `https` 而不是 `http`
+
+pip 镜像源：`~/.pip/pip.conf`
+
+```shell
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host = https://pypi.tuna.tsinghua.edu.cn
+```
+
 
 
 ### golang
