@@ -289,6 +289,49 @@ sudo pacman -Sy obs-studio
 
 ## 常见软件的安装
 
+### Blender
+
+### VirtualBox
+
+Install:
+
+```shell]
+sudo pacman -Sy virtualbox virtualbox-host-modules-arch
+```
+
+Load VirtualBox Modules:
+
+```shell
+sudo modprode vboxdrv
+```
+
+Alternatively, Reboot.
+
+Install  VirtualBox Extension pack:
+
+```shell
+# get virtual box version
+vboxmanage -v | cut -dr -f1
+# download
+wget https://download.virtualbox.org/virtualbox/7.0.12/Oracle_VM_VirtualBox_Extension_Pack-7.0.12.vbox-extpack
+# install
+sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.12.vbox-extpack
+# check pack
+vboxmanage list extpacks
+```
+
+Add User to `vboxusers` Group
+
+```shell
+sudo usermod -aG vboxusers $USER
+```
+
+Reboot and check:
+
+```shell
+groups $USER
+```
+
 ### 基础开发
 
 **VSCode:**
