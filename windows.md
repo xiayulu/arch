@@ -1,6 +1,6 @@
 # Windows
 
-## Tools
+## Tools For Programmer
 
 ### Git
 
@@ -83,16 +83,76 @@ Install Nerd Fonts (Support icons for some themes). Download fonts at: https://w
 
 ```json
 {
-    "profiles":
-    {
-        "defaults":
-        {
-            "font":
-            {
+    "profiles": {
+        "defaults": {
+            "font": {
                 "face": "JetBrainsMono Nerd Font"
             }
         }
     }
 }
+```
+
+✨ **PSReadLine**: [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions) alternative for powershell
+
+> Github: https://github.com/PowerShell/PSReadLine
+
+Install from PowerShellGallery
+
+```bash
+# get posh version
+Get-Host
+
+# install the latest PowerShellGet
+Install-Module -Name PowerShellGet -Force
+
+# After installing PowerShellGet, you can get the latest prerelease version of PSReadLine by running
+Install-Module PSReadLine -AllowPrerelease -Force
+```
+Add Config: `notepad $PROFILE`
+
+```shell
+# PSReadLine
+Import-Module PSReadLine
+# Enable Prediction History
+Set-PSReadLineOption -PredictionSource History
+# Advanced Autocompletion for arrow keys
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+```
+
+✨ **zoxide**: zoxide is a **smarter cd command**, inspired by `z` and `autojump`.
+
+>  Github: https://github.com/ajeetdsouza/zoxide
+
+Install:
+
+```bash
+# not work for me
+winget install ajeetdsouza.zoxide
+
+# I use choco
+choco install zoxide
+```
+
+Add Config: `notepad $PROFILE`
+
+```bash
+# zoxide
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+```
+
+### Chocolatey
+
+The Package Manager for Windows
+
+> Site: https://chocolatey.org/install
+
+```bash
+# Administrator Powershell Run
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# check install
+choco
 ```
 
