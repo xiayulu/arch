@@ -2,12 +2,20 @@
 
 ## Tools For Programmer
 
+### Proxy
+
+- clash
+- ji chang(May Not Free)
+
 ### Git
 
 > Download: https://git-scm.com/download
 
-- Run Installer
-- Config
+👉 **Install**
+
+Run Installer.
+
+👉 **Config**
 
 ```bash
 # check version
@@ -16,9 +24,58 @@ git --version
 # commit info
 git config --global user.email "myemail@example.com"
 git config --global user.name "My Name"
+
+# custom git log info
+# https://www.liaoxuefeng.com/wiki/896043488029600/898732837407424
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
-**Github CLI**
+👉 **Usage**
+
+> Git command list (Chinese): https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
+
+```bash
+# repo
+git init
+git clone <remote link>
+
+# show info
+git status
+git log
+
+##### commit #####
+git add .
+git add *
+git commit -am "commit message"
+git pull
+git push
+
+##### branch #####
+# list all local and remote branchs
+git branch -a
+# list remote branch links
+git remote -v
+# switch to <brach-name>
+git checkout <brach-name>
+# create and switch to <branch-name>
+git checkout -b <branch-name>
+# delete <branch-name>
+git branch -d <branch-name>
+# delete remote <branch-name>
+git push origin --delete <branch-name>
+
+##### tag #####
+# list tags
+git tag
+# add <tag-name> for current commit
+git tag <tag-name>
+# push <tag> to <remote>
+git push <remote> <tag>
+# push all tags
+git push <remote> --tags
+```
+
+✨ **Github CLI**
 
 - Download Installer: https://cli.github.com/
 
@@ -161,7 +218,7 @@ choco
 
 ### VSCode
 
-> Official Site: https://code.visualstudio.com/download
+> Official Site: https://code.visualstudio.com/
 
 VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.
 
@@ -181,8 +238,10 @@ choco install vscodium
 👉 **Preferences**
 
 - Theme: One Dark Pro
-- Icons: Material
-- Font: Nerd Font
+- Icons: Material icon theme
+- Font: JetBrainsMono Nerd Font
+- Auto Save
+- Change Hotkey: Format Document
 
 ✨ **Codeium**: A free AI powered toolkit for developers
 
@@ -214,6 +273,11 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 python -m pip install --upgrade pip
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+👉 **VSCode Extension**
+
+- Python
+- Black formatter
 
 👉 **conda (miniconda)**
 
