@@ -1,10 +1,10 @@
-# Windows
+# Windows Manual For Programmers
 
 ## Tools For Programmer
 
 ### Git
 
-- Download Installer For Windows: https://git-scm.com/download
+> Download: https://git-scm.com/download
 
 - Run Installer
 - Config
@@ -32,22 +32,25 @@ gh auth login
 
 ### Markdown
 
-**Typora**
+👉 **Typora**
 
-- Download: https://typora.io/ (\$14.99 ￥89)
+> Download: https://typora.io/ 
+
+- Purchase: \$14.99 ￥89
 - Settings
-- Theme
+- Add Theme
 
-**Mark Text**
+👉 **Mark Text**
 
-- https://github.com/marktext/marktext
+> Github:https://github.com/marktext/marktext
+
 - Open Source And Free
 
 ### Oh My Posh
 
 Site: https://ohmyposh.dev/
 
-**Install**
+👉 **Install**
 
 ```bash
 # may not work
@@ -56,7 +59,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 ```
 
-**Config**: https://ohmyposh.dev/docs/installation/prompt
+👉 **Config**: https://ohmyposh.dev/docs/installation/prompt
 
 ```bash
 # create $PROFILE file
@@ -79,7 +82,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/ys.omp.json" | Invoke-Expre
 
 Install Nerd Fonts (Support icons for some themes). Download fonts at: https://www.nerdfonts.com/font-downloads, For Example I download `JetBrainsMono Nerd Font`
 
-**Config terminal font**. This can be easily done by modifying the Windows Terminal settings (default shortcut: `CTRL + SHIFT + ,`). In your `settings.json` file, add the `font.face` attribute under the `defaults` attribute in `profiles`:
+👉 **Config terminal font**. This can be easily done by modifying the Windows Terminal settings (default shortcut: `CTRL + SHIFT + ,`). In your `settings.json` file, add the `font.face` attribute under the `defaults` attribute in `profiles`:
 
 ```json
 {
@@ -156,3 +159,108 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco
 ```
 
+### VSCode
+
+> Official Site: https://code.visualstudio.com/download
+
+VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.
+
+Microsoft’s `vscode` source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under [this not-FLOSS license](https://code.visualstudio.com/license) and contains telemetry/tracking. According to [this comment](https://github.com/Microsoft/vscode/issues/60#issuecomment-161792005) from a Visual Studio Code maintainer.
+
+> VSCodium Site: https://vscodium.com/
+
+👉 **Install**
+
+- Download Installer
+- Install with Chocolatey
+
+```bash
+choco install vscodium
+```
+
+👉 **Preferences**
+
+- Theme: One Dark Pro
+- Icons: Material
+- Font: Nerd Font
+
+✨ **Codeium**: A free AI powered toolkit for developers
+
+> Official Site: https://codeium.com/
+
+- Register an account
+- Download extension
+- Login
+
+## Program Development
+
+### Python
+
+> Python Official Site: https://www.python.org/downloads/
+
+👉 **Install**
+
+Run Installer
+
+👉 **Config**
+
+[PyPI tuna mirror](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/):
+
+```bash
+# once
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+
+# set as default
+python -m pip install --upgrade pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+👉 **conda (miniconda)**
+
+> Official Site: https://docs.anaconda.com/free/miniconda/miniconda-install/
+>
+> tuna: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
+
+👉 **Config**
+
+> tuna: https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+
+edit or create `.condarc` 。Windows can run `conda config --set show_channel_urls yes` to generate `.condarc` then change it:
+
+```bash
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+```
+
+👉 **Usage**:
+
+```bash
+# create a environment with specified python version and packages
+conda create -n myenv python=3.9 numpy=1.23.5 astropy
+# activate the environment:
+conda activate myenv
+
+# list envs
+conda env list
+
+# export all packages in myenv environment
+conda activate myenv
+conda env export > myenv.yml
+
+# create a new environment from a myenv.yml
+conda env create -f myenv.yml
+```
