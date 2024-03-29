@@ -1,21 +1,21 @@
 # Windows Manual For Programmers
 
-## Tools For Programmer
 
-### Proxy
+
+## Proxy
 
 - clash
 - ji chang(May Not Free)
 
-### Git
+## Git
 
-> Download: https://git-scm.com/download
+> Download Link : https://git-scm.com/download
 
-👉 **Install**
+### Install
 
 Run Installer.
 
-👉 **Config**
+### Config
 
 ```bash
 # check version
@@ -30,7 +30,7 @@ git config --global user.name "My Name"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
-👉 **Usage**
+### Usage
 
 > Git command list (Chinese): https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
 
@@ -75,7 +75,7 @@ git push <remote> <tag>
 git push <remote> --tags
 ```
 
-✨ **Github CLI**
+### Github CLI
 
 - Download Installer: https://cli.github.com/
 
@@ -87,9 +87,9 @@ gh auth login
 
 - Generate token at: https://github.com/settings/tokens
 
-### Markdown
+## Markdown
 
-👉 **Typora**
+### Typora
 
 > Download: https://typora.io/ 
 
@@ -97,17 +97,17 @@ gh auth login
 - Settings
 - Add Theme
 
-👉 **Mark Text**
+### Mark Text
 
 > Github:https://github.com/marktext/marktext
 
 - Open Source And Free
 
-### Oh My Posh
+## Oh My Posh
 
-Site: https://ohmyposh.dev/
+> Official Site: https://ohmyposh.dev/
 
-👉 **Install**
+### Install
 
 ```bash
 # may not work
@@ -116,7 +116,9 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 ```
 
-👉 **Config**: https://ohmyposh.dev/docs/installation/prompt
+### Config
+
+> Document: https://ohmyposh.dev/docs/installation/prompt
 
 ```bash
 # create $PROFILE file
@@ -137,9 +139,11 @@ add config by using  the [ys](https://ohmyposh.dev/docs/themes#ys) theme
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/ys.omp.json" | Invoke-Expression
 ```
 
-Install Nerd Fonts (Support icons for some themes). Download fonts at: https://www.nerdfonts.com/font-downloads, For Example I download `JetBrainsMono Nerd Font`
+### Font
 
-👉 **Config terminal font**. This can be easily done by modifying the Windows Terminal settings (default shortcut: `CTRL + SHIFT + ,`). In your `settings.json` file, add the `font.face` attribute under the `defaults` attribute in `profiles`:
+**Install Nerd Fonts** (Support icons for some themes). Download fonts at: https://www.nerdfonts.com/font-downloads, For Example I download `JetBrainsMono Nerd Font`
+
+**Config terminal font**. This can be easily done by modifying the Windows Terminal settings (default shortcut: `CTRL + SHIFT + ,`). In your `settings.json` file, add the `font.face` attribute under the `defaults` attribute in `profiles`:
 
 ```json
 {
@@ -152,6 +156,8 @@ Install Nerd Fonts (Support icons for some themes). Download fonts at: https://w
     }
 }
 ```
+
+### Useful tools
 
 ✨ **PSReadLine**: [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions) alternative for powershell
 
@@ -202,11 +208,11 @@ Add Config: `notepad $PROFILE`
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ```
 
-### Chocolatey
+## Chocolatey
 
 The Package Manager for Windows
 
-> Site: https://chocolatey.org/install
+> Official Site: https://chocolatey.org/install
 
 ```bash
 # Administrator Powershell Run
@@ -216,7 +222,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco
 ```
 
-### VSCode
+## VSCode
 
 > Official Site: https://code.visualstudio.com/
 
@@ -226,22 +232,29 @@ Microsoft’s `vscode` source code is open source (MIT-licensed), but the produc
 
 > VSCodium Site: https://vscodium.com/
 
-👉 **Install**
+> **Warning**: VSCodium can not use `code` command.
 
-- Download Installer
-- Install with Chocolatey
+### Install
+
+- Option1: Download Installer from official site.
+- Option2: Install with Chocolatey
 
 ```bash
+# vscode
+choco install vscode
+# vscodium
 choco install vscodium
 ```
 
-👉 **Preferences**
+### Preferences
 
 - Theme: One Dark Pro
 - Icons: Material icon theme
 - Font: JetBrainsMono Nerd Font
 - Auto Save
-- Change Hotkey: Format Document
+- Change Hotkey: Format Document: `Shift+Alt+F ---> Alt+F`
+
+### Codeium
 
 ✨ **Codeium**: A free AI powered toolkit for developers
 
@@ -251,17 +264,20 @@ choco install vscodium
 - Download extension
 - Login
 
-## Program Development
-
-### Python
+## Python
 
 > Python Official Site: https://www.python.org/downloads/
 
-👉 **Install**
+### Install
 
-Run Installer
+- Option1: Download from official site and run installer.
+- Option2: Install with Chocolatey
 
-👉 **Config**
+```bash
+choco install python
+```
+
+### Config
 
 [PyPI tuna mirror](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/):
 
@@ -274,10 +290,12 @@ python -m pip install --upgrade pip
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-👉 **VSCode Extension**
+### VSCode Extension
 
 - Python
 - Black formatter
+
+### conda
 
 👉 **conda (miniconda)**
 
