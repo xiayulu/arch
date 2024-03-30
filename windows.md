@@ -1,11 +1,30 @@
 # Windows Manual For Programmers
 
+## Chocolatey
 
+The Package Manager for Windows
+
+> Official Site: https://chocolatey.org/install
+
+```bash
+# Administrator Powershell Run
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# check install
+choco
+```
 
 ## Proxy
 
-- clash
-- ji chang(May Not Free)
+### install
+
+```bash
+choco install clash-for-windows
+```
+
+### Config
+
+Buy  `air plane`
 
 ## Git
 
@@ -91,11 +110,12 @@ gh auth login
 
 ### Typora
 
-> Download: https://typora.io/ 
+> Official Site: https://typora.io
 
-- Purchase: \$14.99 ￥89
-- Settings
-- Add Theme
+- Purchase: \$14.99, ￥89
+- Preferences
+- Add Themes
+- [Typora plugin](https://github.com/obgnail/typora_plugin): Typora plugins and feature enhancement tools.
 
 ### Mark Text
 
@@ -118,14 +138,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 
 ### Config
 
-> Document: https://ohmyposh.dev/docs/installation/prompt
-
 ```bash
-# create $PROFILE file
+# Document: https://ohmyposh.dev/docs/installation/prompt
+# create $PROFILE file if not exist
 New-Item -Path $PROFILE -Type File -Force
 
 # Solve PowerShell blocks running local scripts
-# 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 
 # edit $PROFILE
@@ -141,7 +159,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/ys.omp.json" | Invoke-Expre
 
 ### Font
 
-**Install Nerd Fonts** (Support icons for some themes). Download fonts at: https://www.nerdfonts.com/font-downloads, For Example I download `JetBrainsMono Nerd Font`
+**Install Nerd Fonts** (Support icons for some themes). Download fonts at: https://www.nerdfonts.com/font-downloads, For Example  `JetBrainsMono Nerd Font`.
 
 **Config terminal font**. This can be easily done by modifying the Windows Terminal settings (default shortcut: `CTRL + SHIFT + ,`). In your `settings.json` file, add the `font.face` attribute under the `defaults` attribute in `profiles`:
 
@@ -208,31 +226,10 @@ Add Config: `notepad $PROFILE`
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ```
 
-## Chocolatey
-
-The Package Manager for Windows
-
-> Official Site: https://chocolatey.org/install
-
-```bash
-# Administrator Powershell Run
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
-# check install
-choco
-```
 
 ## VSCode
 
 > Official Site: https://code.visualstudio.com/
-
-VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.
-
-Microsoft’s `vscode` source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under [this not-FLOSS license](https://code.visualstudio.com/license) and contains telemetry/tracking. According to [this comment](https://github.com/Microsoft/vscode/issues/60#issuecomment-161792005) from a Visual Studio Code maintainer.
-
-> VSCodium Site: https://vscodium.com/
-
-> **Warning**: VSCodium can not use `code` command.
 
 ### Install
 
@@ -264,6 +261,16 @@ choco install vscodium
 - Download extension
 - Login
 
+### VSCodium 
+
+VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.
+
+Microsoft’s `vscode` source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under [this not-FLOSS license](https://code.visualstudio.com/license) and contains telemetry/tracking. According to [this comment](https://github.com/Microsoft/vscode/issues/60#issuecomment-161792005) from a Visual Studio Code maintainer.
+
+> VSCodium Site: https://vscodium.com/
+
+> **Warning**: VSCodium can not use `code` command.
+
 ## Python
 
 > Python Official Site: https://www.python.org/downloads/
@@ -283,7 +290,7 @@ choco install python
 
 ```bash
 # once
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
 # set as default
 python -m pip install --upgrade pip
@@ -294,6 +301,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 - Python
 - Black formatter
+- Pylance
 
 ### conda
 
@@ -346,3 +354,197 @@ conda env export > myenv.yml
 # create a new environment from a myenv.yml
 conda env create -f myenv.yml
 ```
+
+## Docker
+
+> Official Site: https://www.docker.com/products/docker-desktop/
+>
+> Download Link: https://docs.docker.com/desktop/install/windows-install/
+>
+> Docker Hub:https://hub.docker.com/
+
+### Setup WSL 2
+
+> Documents: 
+>
+> https://docs.docker.com/desktop/wsl/
+>
+> https://learn.microsoft.com/en-us/windows/wsl/install
+
+- Installed the WSL 2 feature on Windows. Search At Start: `Turn Windows features on and off`, Check both:
+
+```bash
+Virtual Machine Platform
+Windows Subsystem for Linux
+```
+
+- Update WSL
+
+```bash
+# install update
+wsl --update
+```
+
+Download and install the latest package: [WSL2 Linux kernel update package for x64 machines](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi).
+
+- Install Linux distros.
+
+```bash
+# list installed Linux distributions and check the version of WSL
+wsl -l -v
+
+# install update
+wsl --update
+
+# list available distros
+wsl -l -o
+# install a distro
+wsl --install -d <distro name>
+# set default distr
+wsl --set-default <distro name>
+
+# upgrade the Linux distro to v2
+wsl.exe --set-version <distro name> 2
+# set v2 as the default version for future installations
+wsl.exe --set-default-version 2
+```
+
+- Set up your Linux user info
+
+Once you have installed WSL, you will need to create a user account and password for your newly installed Linux distribution.
+
+Just run your linux distro from start menu.
+
+### Install
+
+> Documents: 
+>
+> https://docs.docker.com/desktop/install/windows-install/
+>
+> https://docs.docker.com/desktop/wsl/
+
+Download and install the latest version of [Docker Desktop for Windows](https://desktop.docker.com/win/main/amd64/Docker Desktop Installer.exe).
+
+### Config
+
+Change Mirrors: Settings---Docker Engine
+
+```json
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com/"
+  ]
+}
+```
+
+### Possible Error
+
+```bash
+Installing, this may take a few minutes...
+WslRegisterDistribution failed with error: 0x8004032d
+Error: 0x8004032d (null)
+Press any key to continue...
+```
+
+Solution: [Enable `Virtual Machine Platform` Windows Feature](https://learn.microsoft.com/en-us/answers/questions/1424692/how-to-fix-wslregisterdistribution-failed-with-err).
+
+## Windows Hotkeys
+
+### Windows 11 New Features
+
+| Operation               | Hotkey  |
+| ----------------------- | ------- |
+| Open Snap Layout        | Win + Z |
+| Open Microsoft  Copilot | Win + C |
+
+### Document Edit
+
+| Operation                            | Hotkey   |
+| ------------------------------------ | -------- |
+| Cut                                  | Ctrl + X |
+| Copy                                 | Ctrl + C |
+| Paste                                | Ctrl + V |
+| Clipboard History                    | Win      |
+| Undo                                 | Ctrl + Z |
+| Redo                                 | Ctrl + Y |
+| Bold                                 | Ctrl + B |
+| Italic                               | Ctrl + I |
+| Underline                            | Ctrl + U |
+| Move cursor to Head of line          | Home     |
+| Move cursor to End of line           | End      |
+| Move cursor to head of next word     | Ctrl + → |
+| Move cursor to head of previous word | Ctrl + ← |
+
+### Window and Desktop
+
+| Operation           | Hotkey      |
+| ------------------- | ----------- |
+| Switch between Apps | Alt + Tab   |
+| Quit App            | Alt + F4    |
+| Refresh App         | Ctrl + R    |
+| Hide/Show Desktop   | Win + D     |
+| Lock Desktop        | Win + L     |
+| Switch Input Method | Win + Space |
+| Open Function Menu  | Win + X     |
+| Print Screen        | PrtScn      |
+| Full Screen         | F11         |
+
+### Virtual Desktop
+
+| Operation                      | Hotkey             |
+| ------------------------------ | ------------------ |
+| Open Task View                 | Win + Tab          |
+| Add Virtual Desktop            | Win + Ctrl + D     |
+| Switch between Virtual Desktop | Win + Ctrl + arrow |
+| Close current Virtual Desktop  | Win + Ctrl + F4    |
+
+### File Browser
+
+| Operation             | Hotkey           |
+| --------------------- | ---------------- |
+| Open File Browser     | Win + E          |
+| Rename                | F2               |
+| Create New Folder     | Ctrl + Shift + N |
+| Delete to Recycle Bin | Del              |
+| Delete Forever        | Shift + Del      |
+| Open Classic Context  | Shift + RC       |
+
+### Task Bar
+
+| Operation                       | Hotkey             |
+| ------------------------------- | ------------------ |
+| Open Start Menu                 | Win / Ctrl + ESC   |
+| Open / Hide nth App in Task Bar | Win + [N]          |
+| Run as Administrator            | Ctrl + Shift  + LC |
+
+### Browser
+
+| Operation          | Hotkey              |
+| ------------------ | ------------------- |
+| Find               | Ctrl + F            |
+| Edit Url           | Alt + D             |
+| Open History       | Ctrl + H            |
+| New Window         | Ctrl + N            |
+| New Tab            | Ctrl + T            |
+| Close Current Tab  | Ctrl + W            |
+| Recycle Tab        | Ctrl + Tab          |
+| Print Current page | Ctrl + P            |
+| Reload             | Ctrl + R / F5       |
+| View Source        | F12                 |
+| Scale              | Ctrl + Mouse Scroll |
+
+### Game
+
+| Operation       | Hotkey             |
+| :-------------- | :----------------- |
+| Open Game Tools | Win + G            |
+| Game Shortcut   | Win + Alt + PrtScn |
+| Game Record     | Win + Alt + R      |
+
