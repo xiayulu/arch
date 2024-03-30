@@ -16,7 +16,7 @@ choco
 
 ## Proxy
 
-### install
+### Install
 
 ```bash
 choco install clash-for-windows
@@ -227,6 +227,16 @@ Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ```
 
 
+
+### Windows Terminal Hotkeys
+
+| Operation | Hotkey           |
+| --------- | ---------------- |
+| Copy      | Ctrl + Shift + C |
+| Past      | Ctrl + Shift + V |
+
+
+
 ## VSCode
 
 > Official Site: https://code.visualstudio.com/
@@ -270,6 +280,29 @@ Microsoft’s `vscode` source code is open source (MIT-licensed), but the produc
 > VSCodium Site: https://vscodium.com/
 
 > **Warning**: VSCodium can not use `code` command.
+
+### Hotkey
+
+Hotkeys May Change due to extension or customizing.
+
+| Operation                | Hotkey                    |
+| ------------------------ | ------------------------- |
+| Comment/Uncomment        | Ctrl + /                  |
+| Multiline Comment        | Alt + Shift + A           |
+| Copy Line                | Ctrl + L                  |
+| Move Line Up/Down        | Alt + up/down             |
+| Copy line to Up/Down     | Shift + Alt + up/down     |
+| Delete line              | Ctrl + X                  |
+| Add / Reduce Indent      | Ctrl + ]/[                |
+| New Line at Any Position | Ctrl + Enter              |
+| Rename Variable          | Ctrl + D (N times)        |
+| Format Document          | Shift + Alt + F (Alt + F) |
+| Goto File Head/End       | Ctrl + Home/Ctrl + End    |
+| Switch Tab               | Ctrl + Tab                |
+| Show all symbols         | Ctrl +Shift + O           |
+| Multi Cursor             | Alt + Left Click          |
+| Multi Cursor             | Ctrl + Alt + Up/Down      |
+| Block Select             | Shift + Alt + Left Drag   |
 
 ## Python
 
@@ -353,6 +386,33 @@ conda env export > myenv.yml
 
 # create a new environment from a myenv.yml
 conda env create -f myenv.yml
+```
+
+👉 **Windows Terminal**:
+
+Add miniconda prompt to windows terminal:
+
+```json
+{
+  "altGrAliasing": true,
+  "antialiasingMode": "grayscale",
+  "closeOnExit": "automatic",
+  "colorScheme": "Campbell",
+  "commandline": "%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\Users\\zuiai\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\zuiai\\miniconda3' \"",
+  "cursorShape": "bar",
+  "font": {
+    "size": 12
+  },
+  "guid": "{3ba1b1d8-9de1-41b7-bb7a-f7903c2e68d6}",
+  "hidden": false,
+  "historySize": 9001,
+  "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+  "name": "MiniConda3",
+  "padding": "8, 8, 8, 8",
+  "snapOnInput": true,
+  "startingDirectory": "%USERPROFILE%\\Desktop",
+  "useAcrylic": false
+}
 ```
 
 ## Docker
@@ -471,7 +531,7 @@ Solution: [Enable `Virtual Machine Platform` Windows Feature](https://learn.micr
 | Cut                                  | Ctrl + X |
 | Copy                                 | Ctrl + C |
 | Paste                                | Ctrl + V |
-| Clipboard History                    | Win      |
+| Clipboard History                    | Win + V  |
 | Undo                                 | Ctrl + Z |
 | Redo                                 | Ctrl + Y |
 | Bold                                 | Ctrl + B |
