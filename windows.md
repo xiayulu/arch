@@ -515,6 +515,69 @@ Press any key to continue...
 
 Solution: [Enable `Virtual Machine Platform` Windows Feature](https://learn.microsoft.com/en-us/answers/questions/1424692/how-to-fix-wslregisterdistribution-failed-with-err).
 
+## Database and Redis
+
+### DBeaver
+
+> Download Link: https://dbeaver.io/download/
+
+👉 **Install**
+
+Download and run Installer.
+
+### Another Redis Desktop Manager
+
+> Github: https://github.com/qishibo/AnotherRedisDesktopManager
+>
+> Download Link: https://github.com/qishibo/AnotherRedisDesktopManager/releases
+
+👉 **Install**
+
+Download and run Installer.
+
+### run postgresql and redis
+
+create `docker-compose.yaml`:
+
+```yaml
+# docker-compose.yaml
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=very_secret_password # do not include $@
+      - POSTGRES_USER=postgres
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - 6379:6379
+```
+
+Then run:
+
+```bash
+docker compose up -d
+```
+
+### Test Postgresql connection
+
+We need download database derive for the first run.
+
+![image-20240331203054179](assets/image-20240331203054179.png)
+
+Input password and check Show all databases
+
+![image-20240331203530302](assets/image-20240331203530302.png)
+
+You can check what you want:
+
+![image-20240331203652333](assets/image-20240331203652333.png)
+
 ## Windows Hotkeys
 
 ### Windows 11 New Features
