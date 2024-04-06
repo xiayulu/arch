@@ -271,6 +271,10 @@ choco install vscodium
 - Download extension
 - Login
 
+### Fitten Code
+
+> Official Site: https://code.fittentech.com/
+
 ### VSCodium 
 
 VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.
@@ -282,6 +286,8 @@ Microsoft’s `vscode` source code is open source (MIT-licensed), but the produc
 > **Warning**: VSCodium can not use `code` command.
 
 ### Hotkey
+
+If you like Idea Key Bindings, Install extension `IntelliJ IDEA Keybindings`
 
 Hotkeys May Change due to extension or customizing.
 
@@ -297,123 +303,13 @@ Hotkeys May Change due to extension or customizing.
 | New Line at Any Position | Ctrl + Enter              |
 | Rename Variable          | Ctrl + D (N times)        |
 | Format Document          | Shift + Alt + F (Alt + F) |
-| Goto File Head/End       | Ctrl + Home/Ctrl + End    |
+| Goto File Start/End      | Ctrl + Home/Ctrl + End    |
 | Switch Tab               | Ctrl + Tab                |
 | Show all symbols         | Ctrl +Shift + O           |
 | Multi Cursor             | Alt + Left Click          |
 | Multi Cursor             | Ctrl + Alt + Up/Down      |
 | Block Select             | Shift + Alt + Left Drag   |
 
-## Python
-
-> Python Official Site: https://www.python.org/downloads/
-
-### Install
-
-- Option1: Download from official site and run installer.
-- Option2: Install with Chocolatey
-
-```bash
-choco install python
-```
-
-### Config
-
-[PyPI tuna mirror](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/):
-
-```bash
-# once
-pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
-
-# set as default
-python -m pip install --upgrade pip
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-```
-
-### VSCode Extension
-
-- Python
-- Black formatter
-- Pylance
-
-### conda
-
-👉 **conda (miniconda)**
-
-> Official Site: https://docs.anaconda.com/free/miniconda/miniconda-install/
->
-> tuna: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
-
-👉 **Config**
-
-> tuna: https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
-
-edit or create `.condarc` 。Windows can run `conda config --set show_channel_urls yes` to generate `.condarc` then change it:
-
-```bash
-channels:
-  - defaults
-show_channel_urls: true
-default_channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
-custom_channels:
-  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
-```
-
-👉 **Usage**:
-
-```bash
-# create a environment with specified python version and packages
-conda create -n myenv python=3.9 numpy=1.23.5 astropy
-# activate the environment:
-conda activate myenv
-
-# list envs
-conda env list
-
-# export all packages in myenv environment
-conda activate myenv
-conda env export > myenv.yml
-
-# create a new environment from a myenv.yml
-conda env create -f myenv.yml
-```
-
-👉 **Windows Terminal**:
-
-Add miniconda prompt to windows terminal:
-
-```json
-{
-  "altGrAliasing": true,
-  "antialiasingMode": "grayscale",
-  "closeOnExit": "automatic",
-  "colorScheme": "Campbell",
-  "commandline": "%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\Users\\zuiai\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\zuiai\\miniconda3' \"",
-  "cursorShape": "bar",
-  "font": {
-    "size": 12
-  },
-  "guid": "{3ba1b1d8-9de1-41b7-bb7a-f7903c2e68d6}",
-  "hidden": false,
-  "historySize": 9001,
-  "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-  "name": "MiniConda3",
-  "padding": "8, 8, 8, 8",
-  "snapOnInput": true,
-  "startingDirectory": "%USERPROFILE%\\Desktop",
-  "useAcrylic": false
-}
-```
 
 ## Docker
 
@@ -578,6 +474,380 @@ You can check what you want:
 
 ![image-20240331203652333](assets/image-20240331203652333.png)
 
+## Python
+
+> Python Official Site: https://www.python.org/downloads/
+
+### Install
+
+- Option1: Download from official site and run installer.
+- Option2: Install with Chocolatey
+
+```bash
+choco install python
+```
+
+### Config
+
+[PyPI tuna mirror](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/):
+
+```bash
+# once
+pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+
+# set as default
+python -m pip install --upgrade pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+### VSCode Extension
+
+- Python
+- Black formatter
+- Pylance
+
+### conda
+
+👉 **conda (miniconda)**
+
+> Official Site: https://docs.anaconda.com/free/miniconda/miniconda-install/
+>
+> tuna: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
+
+👉 **Config**
+
+> tuna: https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+
+edit or create `.condarc` 。Windows can run `conda config --set show_channel_urls yes` to generate `.condarc` then change it:
+
+```bash
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+```
+
+👉 **Usage**:
+
+```bash
+# create a environment with specified python version and packages
+conda create -n myenv python=3.9 numpy=1.23.5 astropy
+# activate the environment:
+conda activate myenv
+
+# list envs
+conda env list
+
+# export all packages in myenv environment
+conda activate myenv
+conda env export > myenv.yml
+
+# create a new environment from a myenv.yml
+conda env create -f myenv.yml
+```
+
+👉 **Windows Terminal**:
+
+Add miniconda prompt to windows terminal:
+
+```json
+{
+  "altGrAliasing": true,
+  "antialiasingMode": "grayscale",
+  "closeOnExit": "automatic",
+  "colorScheme": "Campbell",
+  "commandline": "%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\Users\\zuiai\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\zuiai\\miniconda3' \"",
+  "cursorShape": "bar",
+  "font": {
+    "size": 12
+  },
+  "guid": "{3ba1b1d8-9de1-41b7-bb7a-f7903c2e68d6}",
+  "hidden": false,
+  "historySize": 9001,
+  "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+  "name": "MiniConda3",
+  "padding": "8, 8, 8, 8",
+  "snapOnInput": true,
+  "startingDirectory": "%USERPROFILE%\\Desktop",
+  "useAcrylic": false
+}
+```
+
+## Golang
+
+> Download Link: https://go.dev/dl/
+
+### Install
+
+Download and run installer.
+
+```bash
+# check version
+go version
+
+# check env
+go env
+```
+
+### Config
+
+```bash
+# config proxy
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://proxy.golang.com.cn/,direct
+```
+
+### VSCode Extension
+
+- Go
+- Go Test Explorer
+
+Region folding: 
+
+```json
+"editor.foldingStrategy": "indentation"
+```
+
+```go
+// region Title
+// ...
+// endregion
+```
+
+
+
+### Hello World
+
+`mkdir hello && cd hello`
+
+```bash
+go mod init hello
+```
+
+Add code to `main.go`:
+
+```go
+// main.go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello world")
+}
+```
+Run:
+
+```bash
+go run main.go
+# or
+go run .
+```
+
+## Java / Kotlin
+
+### JDK
+
+> Download Link: https://www.oracle.com/java/technologies/downloads/#jdk21-windows
+
+There is no need to set env vars like `JAVA_HOME` when using java 21.
+
+⚠️ **Warning**: According to https://docs.gradle.org/current/userguide/compatibility.html, Grable has limited support of java 22.
+
+### Android Studio / Idea
+
+> Download Link: https://developer.android.com/studio
+>
+> Idea Download Link: https://www.jetbrains.com/idea/download/?section=windows
+
+Config gradle jdk: File---Settings---Build, Execution---Gradle
+
+### Run Spring  Boot Project
+
+> Spring Initializer: https://start.spring.io/
+
+![image-20240401103739458](assets/image-20240401103739458.png)
+
+### Idea Hotkey
+
+| Operation                                | Hotkey         |
+| ---------------------------------------- | -------------- |
+| `public static void main(String[] args)` | main + Tab     |
+| `System.out.println()`                   | sout + Tab     |
+| Quick Fixes                              | Alt + Enter    |
+| Optimize imports                         | Ctrl + Alt + O |
+
+**Editing**
+
+| Operation                                    | Hotkey                    |
+| -------------------------------------------- | ------------------------- |
+| Select successively increasing code blocks   | Ctrl + W                  |
+| Decrease current selection to previous state | Ctrl + Shift + W          |
+| Comment/Uncomment                            | Ctrl + /                  |
+| Block Comment                                | Ctrl + Shift + /          |
+| Move Line Up/Down                            | Shift + Alt + up/down     |
+| Duplicate Line                               | Ctrl + D                  |
+| Cut line                                     | Ctrl + X                  |
+| Replace                                      | Ctrl + R                  |
+| Find                                         | Ctrl + F                  |
+| Find Next/Previous                           | F3/Shift + F3             |
+| Add / Reduce Indent                          | Tab / Shift + Tab         |
+| Auto-indent line                             | Ctrl + Alt + I            |
+| Start new line                               | Shift + Enter             |
+| Smart line split                             | Ctrl + Enter              |
+| Smart line join                              | Ctrl + Shift + j          |
+| Multi Carets                                 | Alt + Shift + Left Click  |
+| Multi Carets                                 | Click Mouse Middle Button |
+| Collapse/Expand code block                   | Ctrl + `-/=`              |
+| Rename                                       | Shift +F6                 |
+| Override methods                             | Ctrl + O                  |
+| Implement methods                            | Ctrl + I                  |
+| Surround with...                             | Ctrl + Alt + T            |
+
+**Navigation**
+
+| Operation                      | Hotkey            |
+| ------------------------------ | ----------------- |
+| Open Symbol Go to  menu        | Ctrl + N          |
+| Go to Line Start/End           | Home/End          |
+| Go to File Start/End           | Ctrl + Home/End   |
+| Go to Line                     | Ctrl + G          |
+| Go to declaration              | Ctrl + B          |
+| Go to implementation(s)        | Ctrl + Alt + B    |
+| Go to type declaration         | Ctrl + Shift  + B |
+| Go to super-method/super-class | Ctrl + U          |
+| Go to code block start/end     | Ctrl + [/]        |
+| Go to Test                     | Ctrl + Shift + T  |
+| Goto Matching Brace            | Ctrl + Shift + M  |
+| Go to previous/next method     | Alt + up/down     |
+| Switch Tab                     | Ctrl + Tab        |
+
+**Custom**
+
+| Operation   | Hotkey    |
+| ----------- | --------- |
+| Format Code | Ctrl + S  |
+| Terminal    | Ctrl + \` |
+
+## Web
+
+### nodejs
+
+> Download Link:https://nodejs.org/en
+>
+> nvm for Windows: https://github.com/coreybutler/nvm-windows
+
+```bash
+# list all versions
+nvm list
+
+# list online
+nvm list available
+
+# install lts
+nvm install lts
+
+nvm use 21.7.1
+```
+
+### Config
+
+Change Npm Mirror.
+
+⚠️ **Warning**: after change to other mirror, we can not use  `npm search`
+
+```bash
+# check mirror
+npm config get registry
+
+# change mirror
+npm config set registry https://registry.npmmirror.com
+
+# change to default mirror
+npm config set registry https://registry.npmjs.org
+```
+
+**pnpm**
+
+```bash
+npm install -g pnpm
+```
+
+### Vue
+
+> Vuejs Site: https://vuejs.org/guide/quick-start.html
+
+```bash
+npm create vue@latest
+```
+
+Nuxt using [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3) template
+
+```bash
+npx degit antfu/vitesse-nuxt3 my-nuxt3-app
+```
+
+
+
+### React
+
+```bash
+npx create-next-app@latest
+```
+
+### VSCode Extension
+
+- Vue
+- Eslint
+
+## Flutter
+
+> Install document: https://docs.flutter.dev/get-started/install
+
+
+
+## Mimi Program
+
+> Guide:https://developers.weixin.qq.com/miniprogram/en/dev/framework/quickstart/getstart.html
+>
+> Weixin DevTools:https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html
+
+### uni-app
+
+Create uni-app
+
+```bash
+# Create a project developed with typescript
+npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
+
+# Update to the latest official version
+npx @dcloudio/uvm@latest
+# Update to the official version specified version
+npx @dcloudio/uvm@latest 3.2.0
+
+npm run dev:mp-weixin
+```
+
+## C/C++
+
+### Visual Studio 2022
+
+> Download Link: https://visualstudio.microsoft.com/downloads/
+
+
+
 ## Windows Hotkeys
 
 ### Windows 11 New Features
@@ -589,21 +859,21 @@ You can check what you want:
 
 ### Document Edit
 
-| Operation                            | Hotkey   |
-| ------------------------------------ | -------- |
-| Cut                                  | Ctrl + X |
-| Copy                                 | Ctrl + C |
-| Paste                                | Ctrl + V |
-| Clipboard History                    | Win + V  |
-| Undo                                 | Ctrl + Z |
-| Redo                                 | Ctrl + Y |
-| Bold                                 | Ctrl + B |
-| Italic                               | Ctrl + I |
-| Underline                            | Ctrl + U |
-| Move cursor to Head of line          | Home     |
-| Move cursor to End of line           | End      |
-| Move cursor to head of next word     | Ctrl + → |
-| Move cursor to head of previous word | Ctrl + ← |
+| Operation                             | Hotkey   |
+| ------------------------------------- | -------- |
+| Cut                                   | Ctrl + X |
+| Copy                                  | Ctrl + C |
+| Paste                                 | Ctrl + V |
+| Clipboard History                     | Win + V  |
+| Undo                                  | Ctrl + Z |
+| Redo                                  | Ctrl + Y |
+| Bold                                  | Ctrl + B |
+| Italic                                | Ctrl + I |
+| Underline                             | Ctrl + U |
+| Move cursor to Start of line          | Home     |
+| Move cursor to End of line            | End      |
+| Move cursor to Start of next word     | Ctrl + → |
+| Move cursor to Start of previous word | Ctrl + ← |
 
 ### Window and Desktop
 
