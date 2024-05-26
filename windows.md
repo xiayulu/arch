@@ -1,5 +1,7 @@
 # Windows Manual For Programmers
 
+![image-20240409224902154](assets/image-20240409224902154.png)
+
 ## Chocolatey
 
 The Package Manager for Windows
@@ -43,6 +45,8 @@ git --version
 # commit info
 git config --global user.email "myemail@example.com"
 git config --global user.name "My Name"
+
+git config --global http.proxy http://127.0.0.1:7890
 
 # custom git log info
 # https://www.liaoxuefeng.com/wiki/896043488029600/898732837407424
@@ -157,6 +161,12 @@ add config by using  the [ys](https://ohmyposh.dev/docs/themes#ys) theme
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/ys.omp.json" | Invoke-Expression
 ```
 
+**Change User**: This may harm your computer.
+
+```bash
+REname-LocalUser -Name "<new-name>" -NewName "<old-name>"
+```
+
 ### Font
 
 **Install Nerd Fonts** (Support icons for some themes). Download fonts at: https://www.nerdfonts.com/font-downloads, For Example  `JetBrainsMono Nerd Font`.
@@ -226,7 +236,9 @@ Add Config: `notepad $PROFILE`
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ```
 
+✨ **Powershell IntelliSense**
 
+- https://zhuanlan.zhihu.com/p/680813769
 
 ### Windows Terminal Hotkeys
 
@@ -697,6 +709,7 @@ Config gradle jdk: File---Settings---Build, Execution---Gradle
 | Decrease current selection to previous state | Ctrl + Shift + W          |
 | Comment/Uncomment                            | Ctrl + /                  |
 | Block Comment                                | Ctrl + Shift + /          |
+| Upper Case                                   | Ctrl + Shift + U          |
 | Move Line Up/Down                            | Shift + Alt + up/down     |
 | Duplicate Line                               | Ctrl + D                  |
 | Cut line                                     | Ctrl + X                  |
@@ -766,7 +779,7 @@ nvm use 21.7.1
 
 Change Npm Mirror.
 
-⚠️ **Warning**: after change to other mirror, we can not use  `npm search`
+⚠️ **Warning**: after change to other mirror, we may not use  `npm search`
 
 ```bash
 # check mirror
@@ -790,7 +803,7 @@ npm install -g pnpm
 > Vuejs Site: https://vuejs.org/guide/quick-start.html
 
 ```bash
-npm create vue@latest
+pnpm create vue@latest
 ```
 
 Nuxt using [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3) template
